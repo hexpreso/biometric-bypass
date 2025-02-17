@@ -70,6 +70,7 @@ android {
 dependencies {
     implementation(libs.libxposed.service)
     compileOnly(libs.libxposed.api)
+    implementation(libs.kotlinx.coroutines)
 }
 
 

@@ -11,3 +11,4 @@ kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 [libraries]
 libxposed-api = { group = "io.github.libxposed", name = "api", version.ref = "xposed" }
 libxposed-service = { group = "io.github.libxposed", name = "service", version.ref = "xposed-service" }
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version = "1.7.3" }

@@ -63,7 +63,7 @@ jobs:
           set +x  # Disable debug mode
 
       - name: Upload APK as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: debug-apk
           path: ${{ steps.locate_apk.outputs.apk_path }}

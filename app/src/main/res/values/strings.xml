@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Biometric Bypass</string>
-    <string name="app_desc">Bypasses biometric confirmation after successful face unlock in SystemUI.</string>
+    <string name="app_desc">Skips biometric confirmation after face unlock across all apps on Android 10+ devices</string>
 </resources>

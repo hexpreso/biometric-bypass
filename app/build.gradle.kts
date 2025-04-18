@@ -23,6 +23,16 @@ android {
         multiDexEnabled = true
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file(project.findProperty("RELEASE_STORE_FILE") as String)
+            storePassword = project.findProperty("RELEASE_STORE_PASSWORD") as String
+            keyAlias = project.findProperty("RELEASE_KEY_ALIAS") as String
+            keyPassword = project.findProperty("RELEASE_KEY_PASSWORD") as String
+            storeType = "PKCS12"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true

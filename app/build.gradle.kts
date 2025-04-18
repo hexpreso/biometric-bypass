@@ -1,7 +1,3 @@
-import java.time.LocalDateTime
-import java.time.ZoneOffset
-import java.time.format.DateTimeFormatter
-
 plugins {
     alias(libs.plugins.agp.app)
     alias(libs.plugins.kotlin)
@@ -17,8 +13,8 @@ android {
         minSdk = 29
         targetSdk = 35
 
-        versionCode = project.findProperty("versionCode")?.toString()?.toInt() ?: generateVersionCode()
-        versionName = project.findProperty("versionName")?.toString() ?: generateVersionName()
+        versionCode = 100
+        versionName = "1.0.0"
 
         multiDexEnabled = true
     }
@@ -86,15 +82,4 @@ dependencies {
     implementation(libs.libxposed.service)
     compileOnly(libs.libxposed.api)
     implementation(libs.kotlinx.coroutines)
-}
-
-
-fun generateVersionCode(): Int {
-    val now = LocalDateTime.now(ZoneOffset.UTC)
-    return now.format(DateTimeFormatter.ofPattern("yyMMdd")).toInt()
-}
-
-fun generateVersionName(): String {
-    val now = LocalDateTime.now(ZoneOffset.UTC)
-    return now.format(DateTimeFormatter.ofPattern("dd.MM.yy"))
 }

@@ -9,13 +9,13 @@ plugins {
 
 android {
     namespace = "es.rafagale.biometricbypass"
-    compileSdk = 34
+    compileSdk = 35
     buildToolsVersion = "35.0.0"
 
     defaultConfig {
         applicationId = "es.rafagale.biometricbypass"
         minSdk = 33
-        targetSdk = 34
+        targetSdk = 35
 
         versionCode = project.findProperty("versionCode")?.toString()?.toInt() ?: generateVersionCode()
         versionName = project.findProperty("versionName")?.toString() ?: generateVersionName()

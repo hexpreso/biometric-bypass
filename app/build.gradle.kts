@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "es.rafagale.biometricbypass"
-        minSdk = 33
+        minSdk = 29
         targetSdk = 35
 
         versionCode = project.findProperty("versionCode")?.toString()?.toInt() ?: generateVersionCode()

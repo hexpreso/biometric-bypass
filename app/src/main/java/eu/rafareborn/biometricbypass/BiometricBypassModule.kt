@@ -1,7 +1,7 @@
-package es.rafagale.biometricbypass
+package eu.rafareborn.biometricbypass
 
 import android.annotation.SuppressLint
-import es.rafagale.biometricbypass.hooker.BiometricBypassHooker
+import eu.rafareborn.biometricbypass.hooker.BiometricBypassHooker
 import io.github.libxposed.api.XposedInterface
 import io.github.libxposed.api.XposedModule
 import io.github.libxposed.api.XposedModuleInterface.ModuleLoadedParam

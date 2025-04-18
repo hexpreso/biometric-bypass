@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    namespace = "es.rafagale.biometricbypass"
+    namespace = "eu.rafareborn.biometricbypass"
     compileSdk = 35
     buildToolsVersion = "35.0.0"
 
     defaultConfig {
-        applicationId = "es.rafagale.biometricbypass"
+        applicationId = "eu.rafareborn.biometricbypass"
         minSdk = 29
         targetSdk = 35
 

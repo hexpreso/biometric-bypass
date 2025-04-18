@@ -1,11 +1,11 @@
-package es.rafagale.biometricbypass.hooker
+package eu.rafareborn.biometricbypass.hooker
 
 import android.annotation.SuppressLint
 import android.view.View
 import android.widget.Button
-import es.rafagale.biometricbypass.BiometricBypassModule
-import es.rafagale.biometricbypass.BiometricBypassModule.Companion.TAG
-import es.rafagale.biometricbypass.module
+import eu.rafareborn.biometricbypass.BiometricBypassModule
+import eu.rafareborn.biometricbypass.BiometricBypassModule.Companion.TAG
+import eu.rafareborn.biometricbypass.module
 import io.github.libxposed.api.XposedInterface
 import io.github.libxposed.api.annotations.AfterInvocation
 import io.github.libxposed.api.annotations.XposedHooker

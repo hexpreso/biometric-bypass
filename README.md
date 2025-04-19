@@ -79,7 +79,8 @@ Bypassing confirmation reduces friction and security. If someone spoofs your fac
 
 ## Contributing
 
-Pull requests are welcome. Issues too.  
+Pull requests are welcome. Issues too. 
+
 ---
 
 ## License

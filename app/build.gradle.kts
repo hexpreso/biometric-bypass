@@ -6,7 +6,6 @@ plugins {
 android {
     namespace = "eu.rafareborn.biometricbypass"
     compileSdk = 35
-    buildToolsVersion = "35.0.0"
 
     defaultConfig {
         applicationId = "eu.rafareborn.biometricbypass"
@@ -15,8 +14,6 @@ android {
 
         versionCode = 100
         versionName = "1.0.0"
-
-        multiDexEnabled = true
     }
 
     signingConfigs {
@@ -26,6 +23,9 @@ android {
             keyAlias = project.findProperty("RELEASE_KEY_ALIAS") as String
             keyPassword = project.findProperty("RELEASE_KEY_PASSWORD") as String
             storeType = "PKCS12"
+
+            enableV1Signing = false
+            enableV2Signing = true
         }
     }
 
@@ -67,13 +67,21 @@ android {
     packaging {
         resources {
             merges += "META-INF/xposed/*"
-            excludes += "**"
+            excludes += setOf(
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt",
+                "META-INF/AL2.0",
+                "META-INF/LGPL2.1",
+                "META-INF/*.kotlin_module",
+                "META-INF/INDEX.LIST"
+            )
         }
     }
 
     lint {
         abortOnError = true
-        checkReleaseBuilds = false
         disable.add("OldTargetApi")
     }
 }

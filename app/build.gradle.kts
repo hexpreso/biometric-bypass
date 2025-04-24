@@ -18,14 +18,29 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file(project.findProperty("RELEASE_STORE_FILE") as String)
-            storePassword = project.findProperty("RELEASE_STORE_PASSWORD") as String
-            keyAlias = project.findProperty("RELEASE_KEY_ALIAS") as String
-            keyPassword = project.findProperty("RELEASE_KEY_PASSWORD") as String
-            storeType = "PKCS12"
+            fun secret(name: String): String? =
+                providers.gradleProperty(name)
+                    .orElse(providers.environmentVariable(name))
+                    .orNull
 
-            enableV1Signing = false
-            enableV2Signing = true
+            val storeFilePath = secret("RELEASE_STORE_FILE")
+            val storePassword = secret("RELEASE_STORE_PASSWORD")
+            val keyAlias = secret("RELEASE_KEY_ALIAS")
+            val keyPassword = secret("RELEASE_KEY_PASSWORD")
+            val storeType = secret("RELEASE_STORE_TYPE") ?: "PKCS12"
+
+            if (!storeFilePath.isNullOrBlank()) {
+                storeFile = file(storeFilePath)
+                this.storePassword = storePassword
+                this.keyAlias = keyAlias
+                this.keyPassword = keyPassword
+                this.storeType = storeType
+
+                enableV1Signing = false
+                enableV2Signing = true
+            } else {
+                logger.warn("RELEASE_STORE_FILE not found. Release signing is disabled.")
+            }
         }
     }
 

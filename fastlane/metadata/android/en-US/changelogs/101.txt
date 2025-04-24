@@ -1,0 +1,4 @@
+• Upgraded to Kotlin 2.0 and Java 21 for libxposed compatibility  
+• Made release keystore optional using environment fallback  
+• Removed old CI workflow
+• Added Fastlane metadata

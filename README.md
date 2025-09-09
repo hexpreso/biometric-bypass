@@ -2,10 +2,10 @@
 
 **Streamlines face unlock by skipping biometric confirmation in System UI (Android 10+)**
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dfcf1c46fa474099a3aef3f5b3dfe8c3)](https://app.codacy.com/gh/hexpreso/biometric-bypass)
-![GitHub stars](https://img.shields.io/github/stars/hexpreso/biometric-bypass?style=social)
-![GitHub downloads](https://img.shields.io/github/downloads/hexpreso/biometric-bypass/total)
-![GitHub Release (latest by date)](https://img.shields.io/github/v/release/hexpreso/biometric-bypass)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dfcf1c46fa474099a3aef3f5b3dfe8c3)](https://app.codacy.com/gh/hxreborn/biometric-bypass)
+![GitHub stars](https://img.shields.io/github/stars/hxreborn/biometric-bypass?style=social)
+![GitHub downloads](https://img.shields.io/github/downloads/hxreborn/biometric-bypass/total)
+![GitHub Release (latest by date)](https://img.shields.io/github/v/release/hxreborn/biometric-bypass)
 
 ## Overview
 
@@ -66,8 +66,8 @@ This module hooks System UI directly to eliminate that dialog, simulating the in
 
 These branches are unmaintained and only exist for migration or historical reference:
 
-- [Legacy Xposed - Java](https://github.com/hexpreso/biometric-bypass/tree/legacy-xposed-java)
-- [Legacy Xposed - Kotlin](https://github.com/hexpreso/biometric-bypass/tree/legacy-xposed-kotlin)
+- [Legacy Xposed - Java](https://github.com/hxreborn/biometric-bypass/tree/legacy-xposed-java)
+- [Legacy Xposed - Kotlin](https://github.com/hxreborn/biometric-bypass/tree/legacy-xposed-kotlin)
 
 ---
 
